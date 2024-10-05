@@ -30,8 +30,9 @@ const Plan = () => {
               <div className={s.descDiv}>
                 <div className={s.descTitle}>탐색하기</div>
                 <div className={s.descContent}>
-                  <p>세 번째 카테고리인 &lt;탐색하기&gt; 에서는 일상 속 문제어 아카이빙을 탐색해 볼 수 있습니다. 마우스로 일상 속 문제어 카드를</p>
-                  <p>탐색하는 과정을 통해 익숙하다는 이유로 문제삼지 않았던 단어가 얼마나 많은지 직접 경험해 볼 수 있습니다. </p></div>
+                  <p>세 번째 카테고리인 &lt;탐색하기&gt; 에서는 일상 속 문제어 아카이빙을 탐색해 볼 수 있습니다. 마우스로 일상 속 문제어 카드를
+                  탐색하는 과정을 통해 익숙하다는 이유로 문제삼지 않았던 단어가 얼마나 많은지 직접 경험해 볼 수 있습니다. </p>
+                </div>
               </div>
               <div className={s.descDiv}>
                 <div className={s.descTitle}>소개</div>
