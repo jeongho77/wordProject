@@ -207,6 +207,87 @@
   }
   .section3{
     background-color: aqua;
+    display: flex;
+    flex-direction: column;
+
+    .planContainer{
+      width: 1700px;
+      display: flex;
+      flex-direction: row;
+      margin-left: 55px;
+      margin-top: 150px;
+      justify-content: space-between;
+
+      .plan{
+        width : 150px;
+        color: #000;
+        font-family: 'SUIT-Medium';
+        font-size: 40px;
+        font-style: normal;
+        line-height: 140%; /* 56px */
+        letter-spacing: -1.6px;
+        
+      }
+
+      .planContentContainer{
+        display: flex;
+        flex-direction: column;
+        height: 342px;
+        color: var(--MAIN-BLACK, #3A3A3A);
+        font-family: "SUIT-Regular";
+        font-size: 20px;
+        font-style: normal;
+        line-height: 158%;
+        letter-spacing: -0.8px;
+        gap: 25px;
+        justify-content: space-between;
+
+        .planTitle{
+          width : 453px;
+          height : 61px;
+
+          color: var(--MAIN-BLACK, #3A3A3A);
+          font-family: 'SUIT-Regular';
+          font-size: 36px;
+          font-style: normal;
+          line-height: 170%; /* 61.2px */
+          letter-spacing: -1.44px;
+        }
+      }
+
+      .targetContentContainer{
+        display: flex;
+        flex-direction: row;
+        width : 1254px;
+        height: 189px;
+
+        .targetDiv{
+          display: flex;
+          flex-direction: column;
+
+          .targetNumber{
+            width : 311px;
+            height : 79px;
+            border-bottom: 1px solid #000000;
+            color: #000;
+            font-family: 'SUIT-Regular';
+            font-size: 35px;
+            line-height: 160%; /* 56px */
+            letter-spacing: -1.4px;
+          }
+
+          .targetContent{
+            width : 245px;
+            margin-top: 23px;
+            color: #000;
+            font-family: 'SUIT-Regular';
+            font-size: 18px;
+            line-height: 160%; /* 28.8px */
+            letter-spacing: -0.72px;
+          }
+        }
+      }
+    }
   }
 
   .hiddenSection {

@@ -101,7 +101,7 @@ const Plan = () => {
 
         <div className={s.imageContainer}>
           <div className={s.imageDiv}>
-            <img src={image1} alt="" className={s.image}/>
+            <img src={image2} alt="" className={s.image}/>
             <div className={s.imageDescContainer}>
               <div className={s.imgTitle}>Poster 01</div>
               <div className={s.imgContent}>이분법적인 말이 나타내는 문제점을<br/>
@@ -110,7 +110,7 @@ const Plan = () => {
           </div>
 
           <div className={s.imageDiv}>
-            <img src={image2} alt="" className={s.image} />
+            <img src={image1} alt="" className={s.image} />
             <div className={s.imageDescContainer}>
               <div className={s.imgTitle}>Poster 02</div>
               <div className={s.imgContent}>잘못된 의미를 내포하는 말이 나타내는 문제점을<br/>
@@ -136,7 +136,42 @@ const Plan = () => {
         ref={(el) => (sectionRefs.current[2] = el)}
         className={`${s.section3} ${visibleSection === 'section3' ? s.activeSection : s.hiddenSection}`}
       >
-        Section 3 content
+        <div className={s.planContainer}>
+          <div className={s.plan}>기획 의도</div>
+          <div className={s.planContentContainer}>
+            <div className={s.planTitle}>‘땡깡 피우다’ 라는 말을 아십니까?</div>
+            <div className={s.planContent}>‘땡깡’은 뇌전증을 뜻하는 일본어 ‘덴칸’에서 비롯된 말입니다. 발작 증상을 비유했다는 점에서 실제 환자에게 차별적인 단어로 사용됩니다.<br/>
+                샤피어 워프의 가설, “언어는 세계 형식을 규정한다.”는 말처럼 우리가 사용하고 있는 '말' 속에는 사회의 모습, 한 나라의 문화, 그 나라의 고유한 정서가 담겨 있습니다.<br/>
+                그러나 일상에서 익숙하게 사용하는 많은 표현들에는 뿌리 깊은 가부장제 질서로 인해 여성과 가족의 역할을 제한하고 차별하는 말들, 소수자와 사회적 약자를 혐오하는<br/>
+                말들이 혼탁되어 무분별하게 사용되고 있습니다. 또한 지금도 끊임없이 만들어지고 퍼져나가는 신조어에도 인식하지 못한 사회적 약자에 대한 차별과 혐오가 담겨<br/>
+                있습니다. 하지만 이러한 문제는 배제되고 혐오받는 집단에 속한 경우가 아니라면 문제를 민감하게 알아채기 어렵고, 사람들은 익숙한 것을 답습하려는 경향을 가지고<br/>
+                있기 때문에 의식적으로 우리가 사용하는 단어에 대한 문제점을 제시하지 않는다면, 언어 사용의 긍정적인 방향으로의 변화가 어렵습니다.</div>
+            <div className={s.planContentPoint}>대안 언어 연구소는 이러한 언어의 특성을 이해하고, 올바른 언어 사용을 위해 ‘언어 연구 컨퍼런스'를 주최하고, 『요동치는 언어』 프로젝트를 기획하였습니다.</div>
+          </div>
+        </div>
+
+        <div className={s.planContainer}>
+          <div className={s.plan}>목표</div>
+          <div className={s.targetContentContainer}>
+            <div className={s.targetDiv}>
+              <div className={s.targetNumber}>1</div>
+              <div className={s.targetContent}>이제는 쓰지 않아도 될 단어, 새로 고쳐야 할 단어에 대한 고찰</div>
+            </div>
+            <div className={s.targetDiv}>
+              <div className={s.targetNumber}>2</div>
+              <div className={s.targetContent}>비판과 순화의 과정을 반복하는 연습</div>
+            </div>
+            <div className={s.targetDiv}>
+              <div className={s.targetNumber}>3</div>
+              <div className={s.targetContent}>자발적인 문제 인식으로 누구든 단어 사용에 대한 불쾌함과 불편함을 제시할 수 있다는 연대의 메시지</div>
+            </div>
+            <div className={s.targetDiv}>
+              <div className={s.targetNumber}>4</div>
+              <div className={s.targetContent}>언어를 재고해보는 날을 지정해, 단어 사용의 틀림에 대해 주장할 수 있는
+              <br/>공론의 장 제시</div>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
   );
