@@ -10,7 +10,7 @@ const Plan = () => {
     const options = {
       root: null, // 뷰포트 기준
       rootMargin: '0px',
-      threshold: 0.5, // 각 섹션이 50% 이상 보일 때
+      threshold: 0.6, // 각 섹션이 60% 이상 보일 때
     };
 
     const observer = new IntersectionObserver((entries) => {
@@ -79,7 +79,7 @@ const Plan = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </div>435
         </div>
       </section>
 
@@ -88,7 +88,14 @@ const Plan = () => {
         ref={(el) => (sectionRefs.current[1] = el)}
         className={`${s.section2} ${visibleSection === 'section2' ? s.activeSection : s.hiddenSection}`}
       >
-        Section 2 content
+        <div className={s.conferenceContainer}>
+          <div className={s.conferenceTitle}><p>언어 연구 컨퍼런스 2024</p></div>
+          <div className={s.conferenceContent}>
+            <p>언어 연구 컨퍼런스 2024는 익숙하다는 이유로 문제 삼지 않은 일상 언어에 대해 재고해보도록 하는 언어 연구 컨퍼런스입니다.<br/>
+            코엑스C홀, 매일 오전 10시부터 오후 5시에 진행됩니다.<br/>
+            『요동치는 언어』 프로젝트의 포스터는 특정 언어가 가진 문제점을 크게 3가지로 분류하여 타이포그래피와 그래픽의 해체로 표현하였습니다.</p></div>
+        </div>
+        
       </section>
 
       <section
