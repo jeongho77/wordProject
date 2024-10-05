@@ -1,6 +1,9 @@
 import './Plan.module.scss'; // 별도의 CSS 파일을 사용할 경우
 import s from './Plan.module.scss';
 import React, { useEffect, useRef, useState } from 'react';
+import image1 from "./imgs/image1.svg"
+import image2 from "./imgs/image2.svg"
+import image3 from "./imgs/image3.svg"
 
 const Plan = () => {
   const sectionRefs = useRef([]); // 섹션 참조 배열
@@ -95,6 +98,36 @@ const Plan = () => {
             코엑스C홀, 매일 오전 10시부터 오후 5시에 진행됩니다.<br/>
             『요동치는 언어』 프로젝트의 포스터는 특정 언어가 가진 문제점을 크게 3가지로 분류하여 타이포그래피와 그래픽의 해체로 표현하였습니다.</p></div>
         </div>
+
+        <div className={s.imageContainer}>
+          <div className={s.imageDiv}>
+            <img src={image1} alt="" className={s.image}/>
+            <div className={s.imageDescContainer}>
+              <div className={s.imgTitle}>Poster 01</div>
+              <div className={s.imgContent}>이분법적인 말이 나타내는 문제점을<br/>
+              글자가 찢어지는 형태로 표현한 포스터입니다.</div>
+            </div>
+          </div>
+
+          <div className={s.imageDiv}>
+            <img src={image2} alt="" className={s.image} />
+            <div className={s.imageDescContainer}>
+              <div className={s.imgTitle}>Poster 02</div>
+              <div className={s.imgContent}>잘못된 의미를 내포하는 말이 나타내는 문제점을<br/>
+              휘어지는 형태와과 가루가 되어 사라지는 그래픽으로 표현한 포스터입니다.</div>
+            </div>
+          </div>
+
+          <div className={s.imageDiv}>
+            <img src={image3} alt="" className={s.image} />
+            <div className={s.imageDescContainer}>
+              <div className={s.imgTitle}>Poster 03</div>
+              <div className={s.imgContent}>약자와 소수자를 혐오하는 말이 나타내는 문제점을<br/>
+              글자가 깨지는 형태로 표현한 포스터입니다.</div>
+            </div>
+          </div>
+        </div>
+
         
       </section>
 

@@ -4,6 +4,8 @@ import './index.css';
 import App from './App';
 import S from './Page/Plan/Plan.js'
 import reportWebVitals from './reportWebVitals';
+import Quiz from './Page/Plan/Plan.js';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
