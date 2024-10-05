@@ -22,6 +22,7 @@
         height : 112px;
 
         p{
+          font-family: 'SUIT-Medium';
           width: 387px;
           height: 112px;
           font-size: 40px;
@@ -40,6 +41,7 @@
             width : 100%;
 
             p {
+              font-family: 'SUIT-Regular';
               font-size: 20px;
               letter-spacing: -0.68px;
               line-height: 31.6px;;
@@ -64,6 +66,7 @@
             box-sizing: border-box;
             
             .descTitle{
+              font-family: 'SUIT-Regular';
                 width: 135px;
                 height : 60px;
                 font-size : 35px;
@@ -84,6 +87,7 @@
                   align-items: center;
 
                 p{
+                  font-family: 'SUIT-Light';
                   width : 790px;
                   height : 46px;
                   font-size: 16px;
@@ -97,5 +101,13 @@
         }
       }
     }
+  }
+  .hiddenSection {
+    display: none; /* 보이지 않음 */
+  }
+  
+  .activeSection {
+    display: block; /* 보이는 상태 */
+    transition: opacity 0.5s ease-in-out; /* 전환 효과 */
   }
 }

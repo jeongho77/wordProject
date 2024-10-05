@@ -1,8 +1,39 @@
-import React from 'react';
 import './Plan.module.scss'; // 별도의 CSS 파일을 사용할 경우
 import s from './Plan.module.scss'
+import React, { useEffect, useRef, useState } from 'react';
 
 const Plan = () => {
+  const sectionRefs = useRef([]);
+  const [visibleSection, setVisibleSection] = useState(null);
+
+  useEffect(() => {
+    const options = {
+      root: null, // 뷰포트를 기준으로 감시
+      rootMargin: '0px',
+      threshold: 0.5, // 50% 이상 보일 때 해당 섹션을 활성화
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setVisibleSection(entry.target.id);
+        }
+      });
+    }, options);
+
+    // 모든 섹션을 관찰 대상으로 설정
+    sectionRefs.current.forEach((section) => {
+      if (section) observer.observe(section);
+    });
+
+    // 컴포넌트가 언마운트되면 observer 해제
+    return () => {
+      sectionRefs.current.forEach((section) => {
+        if (section) observer.unobserve(section);
+      });
+    };
+  }, []);
+
   return (
     <main className={s.container}>
       <section className={s.section1}>
@@ -20,12 +51,12 @@ const Plan = () => {
             <div className={s.descTable}>
               <div className={s.descDiv}>
                 <div className={s.descTitle}>기획</div>
-                <div className={s.descContent}>첫 번째 카테고리인 &lt;기획&gt;에서는  대안언어연구소에서 주최하는 『요동치는 언어』 프로젝트 소개 및 기획 의도, 웹 페이지 구성을 확인할 수 있습니다. </div>
+                <div className={s.descContent}><p>첫 번째 카테고리인 &lt;기획&gt;에서는  대안언어연구소에서 주최하는 『요동치는 언어』 프로젝트 소개 및 기획 의도, 웹 페이지 구성을 확인할 수 있습니다. </p></div>
               </div>
               <div className={s.descDiv}>
                 <div className={s.descTitle}>문제풀기</div>
-                <div className={s.descContent}>두 번째 카테고리인 &lt;문제풀기&gt;에서는 기사, 방송, 대화 등 일상 생활에서 접할 수 있는 문장 속 잘못 사용되고 있는 단어를 
-                선택해보는 체험을 할 수 있습니다. </div>
+                <div className={s.descContent}><p>두 번째 카테고리인 &lt;문제풀기&gt;에서는 기사, 방송, 대화 등 일상 생활에서 접할 수 있는 문장 속 잘못 사용되고 있는 단어를 
+                선택해보는 체험을 할 수 있습니다. </p></div>
               </div>
               <div className={s.descDiv}>
                 <div className={s.descTitle}>탐색하기</div>
@@ -36,13 +67,39 @@ const Plan = () => {
               </div>
               <div className={s.descDiv}>
                 <div className={s.descTitle}>소개</div>
-                <div className={s.descContent}>네 번째 카테고리인 &lt;소개&gt; 에서는 『요동치는 언어』 프로젝트를 주최한 &lt;대안언어 연구소&gt;에 대한 조직도 및 연혁을 확인할 수 있습니다. </div>
+                <div className={s.descContent}><p>네 번째 카테고리인 &lt;소개&gt; 에서는 『요동치는 언어』 프로젝트를 주최한 &lt;대안언어 연구소&gt;에 대한 조직도 및 연혁을 확인할 수 있습니다. </p></div>
               </div>
             </div>
-
            </div>
         </div>
       </section>
+
+
+      <section
+        id="section2"
+        ref={(el) => (sectionRefs.current[0] = el)}
+        className={visibleSection === 'section2' ? s.activeSection : s.hiddenSection}
+      >
+        Section 2 content
+      </section>
+
+      <section
+        id="section3"
+        ref={(el) => (sectionRefs.current[1] = el)}
+        className={visibleSection === 'section3' ? s.activeSection : s.hiddenSection}
+      >
+        Section 3 content
+      </section>
+
+      <section
+        id="section4"
+        ref={(el) => (sectionRefs.current[2] = el)}
+        className={visibleSection === 'section4' ? s.activeSection : s.hiddenSection}
+      >
+        Section 4 content
+      </section>
+
+      
     </main>
   );
 };
