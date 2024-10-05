@@ -3,7 +3,7 @@
 @import '../../styles/reset';
 
 .container {
-  width : 100%;
+  overflow: hidden; // 스크롤 방지
   
   .section1 { 
     width : 100%;
@@ -104,10 +104,6 @@
     }
   }
 
-  .hiddenSection {
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
-  }
   
   .activeSection {
     opacity: 1;
@@ -123,4 +119,16 @@
     transition: opacity 0.5s ease-in-out;
   }
 
+  .section2{
+    background-color: pink;
+  }
+  .section3{
+    background-color: aqua;
+  }
+
+  .hiddenSection {
+    opacity: 0; // 숨겨진 섹션
+    pointer-events: none; // 숨겨진 섹션의 클릭 이벤트 차단
+    transition: opacity 0.5s ease-in-out;
+  }
 }

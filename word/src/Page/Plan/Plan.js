@@ -4,13 +4,13 @@ import React, { useEffect, useRef, useState } from 'react';
 
 const Plan = () => {
   const sectionRefs = useRef([]); // 섹션 참조 배열
-  const [visibleSection, setVisibleSection] = useState(null); // 현재 보이는 섹션을 추적
+  const [visibleSection, setVisibleSection] = useState('section1'); // 기본적으로 첫 번째 섹션이 보이도록 설정
 
   useEffect(() => {
     const options = {
       root: null, // 뷰포트 기준
       rootMargin: '0px',
-      threshold: 0.5, // 섹션이 50% 이상 보일 때
+      threshold: 0.5, // 각 섹션이 50% 이상 보일 때
     };
 
     const observer = new IntersectionObserver((entries) => {
@@ -34,12 +34,13 @@ const Plan = () => {
     };
   }, []);
 
+
   return (
     <main className={s.container}>
       <section
         id="section1"
         ref={(el) => (sectionRefs.current[0] = el)}
-        className={visibleSection === 'section1' ? `${s.section1} ${s.activeSection}` : s.section1}
+        className={`${s.section1} ${visibleSection === 'section1' ? s.activeSection : s.hiddenSection}`}
       >
         <div className={s.textContainer}>
           <div className={s.title}>
@@ -85,7 +86,7 @@ const Plan = () => {
       <section
         id="section2"
         ref={(el) => (sectionRefs.current[1] = el)}
-        className={visibleSection === 'section2' ? `${s.section2} ${s.activeSection}` : s.section2}
+        className={`${s.section2} ${visibleSection === 'section2' ? s.activeSection : s.hiddenSection}`}
       >
         Section 2 content
       </section>
@@ -93,17 +94,9 @@ const Plan = () => {
       <section
         id="section3"
         ref={(el) => (sectionRefs.current[2] = el)}
-        className={visibleSection === 'section3' ? `${s.section3} ${s.activeSection}` : s.section3}
+        className={`${s.section3} ${visibleSection === 'section3' ? s.activeSection : s.hiddenSection}`}
       >
         Section 3 content
-      </section>
-
-      <section
-        id="section4"
-        ref={(el) => (sectionRefs.current[3] = el)}
-        className={visibleSection === 'section4' ? `${s.section4} ${s.activeSection}` : s.section4}
-      >
-        Section 4 content
       </section>
     </main>
   );
