@@ -1,17 +1,5 @@
-@font-face {
-    font-family: 'SUIT';
-    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Regular.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
-}
+<link href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT@2/fonts/static/woff2/SUIT.css" rel="stylesheet">
 
-@font-face {
-    font-family: 'SUIT';
-    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Bold.woff2') format('woff2');
-    font-weight: bold;
-    font-style: normal;
-}
-
-body {
-    font-family: 'SUIT', sans-serif;
-}
+<style>
+     body {font-family: 'SUIT', sans-serif;}
+</style>
