@@ -7,7 +7,7 @@
   overflow: hidden; // 스크롤 방지
   
   .section1 { 
-    width : 100%;
+    width : 1920px;
     background-color: #FFFFFF;
     
     .textContainer {
@@ -118,6 +118,7 @@
   }
 
   .section2{
+    width : 1920px;
     background-color: pink;
     display: flex;
     flex-direction: column;
@@ -128,8 +129,8 @@
       width: 1691px;
       height : 96px;
       margin-left: 55px;
-      margin-top: 50px;
-      justify-content: space-between;
+      margin-top: 25px;
+      gap: 295px;
 
       .conferenceTitle{
           width : 380px;
@@ -160,22 +161,19 @@
     }
 
     .imageContainer{
-      width : 100%;
-      height : 837px;
+      width: 100%;
+      height: 837px;
       display: flex;
       flex-direction: row;
-      justify-content: space-around;
       margin-top: 30px;
-
+      justify-content: space-around;
+      
       .imageDiv{
         display: flex;
         flex-direction: column;
-        width : 515px;
+        width : 380px;
 
-        image{
-          width : 515px;
-          height : 728px;
-        }
+        
 
         .imageDescContainer{
           margin-top: 12px;
@@ -205,6 +203,7 @@
   }
   .section3{
     background-color: aqua;
+    width : 1920px;
     display: flex;
     flex-direction: column;
 
@@ -228,6 +227,7 @@
       }
 
       .planContentContainer{
+        width: 1254px;
         display: flex;
         flex-direction: column;
         height: 342px;
