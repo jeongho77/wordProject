@@ -8,7 +8,7 @@ export default function Header() {
 
     return (
         <>
-            <main className={s.container}>
+            
                 <header className={s.headerContainer}>
                     <nav className={s.nav}>
                         <div className={s.plan}>기획</div>
@@ -31,7 +31,6 @@ export default function Header() {
                         </div>
                     </div>
                 </header>
-            </main>
         </>
     )
 }
