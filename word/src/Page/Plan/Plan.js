@@ -82,7 +82,7 @@ const Plan = () => {
                 </div>
               </div>
             </div>
-          </div>435
+          </div>
         </div>
       </section>
 
@@ -168,7 +168,7 @@ const Plan = () => {
             <div className={s.targetDiv}>
               <div className={s.targetNumber}>4</div>
               <div className={s.targetContent}>언어를 재고해보는 날을 지정해, 단어 사용의 틀림에 대해 주장할 수 있는
-              <br/>공론의 장 제시</div>
+              공론의 장 제시</div>
             </div>
           </div>
         </div>
