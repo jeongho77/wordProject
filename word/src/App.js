@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import Header from './Component/Header';
 import Plan from './Page/Plan/Plan';
-import Quiz from './Page/quiz/Quiz';
+import Quiz from './Page/Quiz/Quiz';
 import { Routes, Route, BrowserRouter } from "react-router-dom";
 
 function App() {
@@ -11,7 +11,7 @@ function App() {
         display: "flex",
         flexDirection: "column",
         width : "1920px",
-        paddingTop: "100px",
+        // paddingTop: "100px",
         minHeight: "100vh",
         alignItems: "center",
       }}>
