@@ -4,6 +4,8 @@ import React, { useEffect, useRef, useState } from 'react';
 import image1 from "./imgs/image1.svg"
 import image2 from "./imgs/image2.svg"
 import image3 from "./imgs/image3.svg"
+import { motion } from 'framer-motion';
+
 
 const Plan = () => {
   const sectionRefs = useRef([]); // 섹션 참조 배열
@@ -39,6 +41,12 @@ const Plan = () => {
 
 
   return (
+    <motion.div
+            initial={{ opacity: 0, x: 100 }}  // 오른쪽에서 등장
+            animate={{ opacity: 1, x: 0 }}    // 중앙에 자리잡음
+            exit={{ opacity: 0, x: -100 }}    // 왼쪽으로 사라짐
+            transition={{ duration: 0.5 }}    // 애니메이션 지속 시간
+        >
     <main className={s.container}>
       <section
         id="section1"
@@ -174,6 +182,7 @@ const Plan = () => {
         </div>
       </section>
     </main>
+    </motion.div>
   );
 };
 
