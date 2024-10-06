@@ -2,7 +2,8 @@ import logo from './logo.svg';
 import Header from './Component/Header';
 import Plan from './Page/Plan/Plan';
 import Quiz from './Page/Quiz/Quiz';
-import { Routes, Route, BrowserRouter } from "react-router-dom";
+import QuizList from './Page/Quiz/QuizList'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
   return (
@@ -15,10 +16,15 @@ function App() {
         minHeight: "100vh",
         alignItems: "center",
       }}>
-        {/* <Header></Header>
-        <Plan></Plan> */}
-        <Quiz></Quiz>
 
+        <Router>
+          <Header />
+            <Routes>
+                <Route path="/" element={<Plan/>}/>
+                <Route path="/quiz" element={<Quiz />} />
+                <Route path="/quizlist" element={<QuizList />} /> {/* QuizList 경로 설정 */}
+            </Routes>
+        </Router>
     </div>
   );
 }
