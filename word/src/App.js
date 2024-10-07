@@ -5,6 +5,7 @@ import Plan from './Page/Plan/Plan';
 import Quiz from './Page/Quiz/Quiz';
 import QuizList from './Page/Quiz/QuizList';
 import QuizDetail from './Page/Quiz/Detail/Detail';
+import QuizCheck from './Page/Quiz/Check/Check';
 
 function AnimatedRoutes() {
   const location = useLocation();
@@ -18,6 +19,8 @@ function AnimatedRoutes() {
         <Route path="/quiz" element={<Quiz />} />
         <Route path="/quizlist" element={<QuizList />} />
         <Route path="/quizlist/detail" element={<QuizDetail />} />
+        <Route path="/quizlist/detail/check" element={<QuizCheck />} />
+        
       </Routes>
     </AnimatePresence>
   );
